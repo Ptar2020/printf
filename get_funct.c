@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * get_match_func - match format with function format
+ * get_funct - match format with function format
  * @format: It's a character string
- * @list: the list of arguments the function _printf is receiving
+ * @args: the list of arguments the function _printf is receiving
  * Return: the number of character the function is printing
  */
-int get_match_func(const char *format, va_list list, st_fmt st_format[])
+int get_funct(const char *format, va_list args, st_fmt st_format[])
 {
 	int count = 0, i = 0, j, k = 0, num = 0;
 
@@ -22,7 +22,7 @@ int get_match_func(const char *format, va_list list, st_fmt st_format[])
 			{
 				if (format[i + 1] == st_format[j].fmt[k])
 				{
-					num = st_format[j].func(list);
+					num = st_format[j].func(args);
 					count += num;
 					i++;
 					break;
