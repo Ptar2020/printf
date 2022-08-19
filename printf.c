@@ -10,13 +10,10 @@
 int _printf(const char *format, ...)
 {
 	st_fmt st_format[] =
- {
+	{
 		{"c", func_char},
 		{"s", func_string},
-		
-		
 		{"%", func_percent},
-		/*
 		{"i", func_digit},
 		{"d", func_digit},
 		{"b", func_binary_convert},
@@ -27,7 +24,7 @@ int _printf(const char *format, ...)
 		{"S", func_stringUppercase},
 		{"r", func_revstr},
 		{"R", func_rot13},
-		{NULL, NULL}*/
+		{NULL, NULL}
 };
 	va_list args;
 	int counter;
@@ -35,5 +32,5 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	counter = get_funct(format, args, st_format);
 	va_end(args);
-	return counter;
+	return (counter);
 }
