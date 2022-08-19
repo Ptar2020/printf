@@ -9,8 +9,7 @@
 
 int _printf(const char *format, ...)
 {
-	st_fmt st_format[] =
-	{
+	st_fmt st_format[] = {
 		{"c", func_char},
 		{"s", func_string},
 		{"%", func_percent},
