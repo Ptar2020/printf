@@ -13,9 +13,12 @@ int _printf(const char *format, ...)
  {
 		{"c", func_char},
 		{"s", func_string},
-		{"d", func_digit},
-		{"i", func_digit},
+		
+		
 		{"%", func_percent},
+		/*
+		{"i", func_digit},
+		{"d", func_digit},
 		{"b", func_binary_convert},
 		{"u", func_unsig_int},
 		{"o", func_octal_convert},
@@ -24,7 +27,7 @@ int _printf(const char *format, ...)
 		{"S", func_stringUppercase},
 		{"r", func_revstr},
 		{"R", func_rot13},
-		{NULL, NULL}
+		{NULL, NULL}*/
 };
 	va_list args;
 	int counter;
