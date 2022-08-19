@@ -19,7 +19,7 @@ int _putchar(char c);
 int func_string(va_list);
 int func_char(va_list);
 int func_percent(va_list);
-int get_match_func(const char *, va_list, st_fmt st_format[]);
+int get_funct(const char *, va_list, st_fmt st_format[]);
 int func_digit(va_list);
 int func_binary_convert(va_list);
 int func_octal_convert(va_list);
